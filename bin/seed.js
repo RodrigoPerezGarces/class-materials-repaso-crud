@@ -5,6 +5,8 @@ const Park = require('../models/park.model')
 const dbtitle = 'repaso-crud'
 mongoose.connect(`mongodb://localhost/${dbtitle}`, { useUnifiedTopology: true, useNewUrlParser: true })
 
+// --- MODELS ----
+
 Coaster.collection.drop()
 Park.collection.drop()
 

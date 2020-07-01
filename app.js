@@ -1,5 +1,6 @@
 require('dotenv').config()
 
+
 const express = require('express')
 const app = express()
 
@@ -10,9 +11,12 @@ require('./configs/preprocessor.config')(app)
 require('./configs/locals.config')(app)
 require('./configs/debug.config')
 
-// Base URL's
+// ROUTES INDEX
+
 app.use('/', require('./routes/index.routes'))
 app.use('/coasters', require('./routes/coaster.routes'))
 app.use('/parks', require('./routes/park.routes'))
+
+
 
 module.exports = app
